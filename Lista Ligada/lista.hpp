@@ -7,7 +7,15 @@ typedef string Hora;
 
 class Item{
 private:
+  //Variaveis que o item vai guardar
+  //No caso de um horario de escola
+  //Seriam int horario, int cargaHoraria; string NomedaMateria
+  string item1;
+  int item2;
+  float item3;
 
+  cria();
+  mostra();
 
 };
 
@@ -23,6 +31,8 @@ public:
     this->item = item;
     prox = NULL;
   }
+
+  cria();
 };
 
 class Lista{
@@ -31,14 +41,10 @@ private:
   Item item;
   int tam;
 public:
-  Lista(){
-    prim = new No; //cabeça
-    prim->prox = NULL;
-    ult = prim;
-  }
+  Lista();
   void cria();
   void insere(Item);
-  void mostra();
+  void print();
   void remove( No *p, Item &item);
   void busca(Item item);
 };

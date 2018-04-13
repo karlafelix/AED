@@ -1,6 +1,12 @@
 #include<lista.hpp>
 using namespace std;
 
+Lista::Lista(){
+  prim = new No; //cabeça
+  prim->prox = NULL;
+  ult = prim;
+}
+
 void Lista::insere(Item it){
   ult->prox = new No(it);
   ult = ult->prox;
